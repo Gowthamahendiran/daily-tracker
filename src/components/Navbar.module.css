@@ -1,0 +1,118 @@
+.navbar {
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.logoLink {
+    background: linear-gradient(to right, #818cf8, #22d3ee);
+    /* indigo-400 to cyan-400 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.logoLink:hover {
+    background: linear-gradient(to right, #a5b4fc, #67e8f9);
+    /* indigo-300 to cyan-300 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.navGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.userEmail {
+    color: #cbd5e1;
+    /* slate-300 */
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .userEmail {
+        display: block;
+    }
+}
+
+.logoutBtn {
+    background-color: rgba(239, 68, 68, 0.1);
+    /* red-500/10 */
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    /* red-500/50 */
+    color: #ef4444;
+    /* red-500 */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.logoutBtn:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loginLink {
+    color: #cbd5e1;
+    /* slate-300 */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.loginLink:hover {
+    color: #ffffff;
+}
+
+.signupLink {
+    background-color: #4f46e5;
+    /* indigo-600 */
+    color: #ffffff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+    transition: all 0.2s ease;
+    transform: scale(1);
+}
+
+.signupLink:hover {
+    background-color: #4338ca;
+    /* indigo-700 */
+    transform: scale(1.05);
+}
