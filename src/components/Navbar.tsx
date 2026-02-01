@@ -31,6 +31,7 @@ export default function Navbar() {
                 <div className={styles.navGroup}>
                     {user ? (
                         <>
+                            <Link href="/dashboard" className={styles.navLink} style={{ marginRight: '1rem', color: '#4b5563', textDecoration: 'none' }}>Dashboard</Link>
                             <span className={styles.userEmail}>
                                 {user.email}
                             </span>

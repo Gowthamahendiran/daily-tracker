@@ -1,0 +1,147 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.dateNav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.navBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #4b5563;
+    border-radius: 4px;
+}
+
+.navBtn:hover {
+    background-color: #f3f4f6;
+    color: #000;
+}
+
+.currentDate {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1f2937;
+    min-width: 150px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1px;
+}
+
+.tabBtn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tabBtn:hover {
+    color: #374151;
+}
+
+.activeTab {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.skeleton {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #f6f7f8 4%, #edeef1 25%, #f6f7f8 36%);
+    background-size: 1000px 100%;
+    border-radius: 8px;
+}
+
+/* Grid Layouts for Components */
+.weight,
+.habits {
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .weight {
+        grid-column: span 4;
+    }
+
+    .habits {
+        grid-column: span 8;
+    }
+}
+
+.food {
+    grid-column: span 12;
+}
+
+.planning,
+.todos {
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .planning {
+        grid-column: span 7;
+    }
+
+    .todos {
+        grid-column: span 5;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.25rem;
+    color: #6b7280;
+}

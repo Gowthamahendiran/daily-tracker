@@ -16,24 +16,30 @@ import { Auth } from "firebase/auth";
 import { Firestore } from "firebase/firestore";
 import { FirebaseApp } from "firebase/app";
 
+import { getStorage, FirebaseStorage } from "firebase/storage";
+
 let app: FirebaseApp | undefined;
 let auth: Auth;
 let db: Firestore;
+let storage: FirebaseStorage;
 
 if (typeof window !== "undefined" && firebaseConfig.apiKey) {
     app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
     auth = getAuth(app);
     db = getFirestore(app);
+    storage = getStorage(app);
 } else {
     // Server side or build time handling
     if (firebaseConfig.apiKey) {
         app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
         auth = getAuth(app);
         db = getFirestore(app);
+        storage = getStorage(app);
     } else {
         auth = {} as Auth;
         db = {} as Firestore;
+        storage = {} as FirebaseStorage;
     }
 }
 
-export { auth, db };
+export { auth, db, storage };

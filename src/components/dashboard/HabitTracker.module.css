@@ -1,0 +1,134 @@
+.container {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.manageBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s;
+    padding: 0.25rem;
+}
+
+.manageBtn:hover {
+    color: #3b82f6;
+}
+
+.habitList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.habitItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.habitItem:hover {
+    background-color: #f9fafb;
+}
+
+.checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #d1d5db;
+    accent-color: #3b82f6;
+}
+
+.habitName {
+    font-size: 1rem;
+    color: #374151;
+}
+
+/* Management View */
+.manageView {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.addForm {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.addBtn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.addBtn:hover {
+    background-color: #2563eb;
+}
+
+.listManage {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.manageItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.active {
+    color: #059669;
+}
+
+.inactive {
+    color: #9ca3af;
+}
