@@ -21,7 +21,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={styles.navbar}>
+        <div className={styles.navbar}>
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href="/" className={styles.logoLink}>
@@ -53,6 +53,6 @@ export default function Navbar() {
                     )}
                 </div>
             </div>
-        </nav>
+        </div>
     );
 }

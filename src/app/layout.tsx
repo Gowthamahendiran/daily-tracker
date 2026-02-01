@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google"; // Removed Metadata import conflict if needed, or keeping it. Wait, I should import AuthProvider.
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css"; // Removed Metadata import conflict if needed, or keeping it. Wait, I should import AuthProvider.
 import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 
