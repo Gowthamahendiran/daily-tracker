@@ -110,10 +110,20 @@ export const DashboardProvider = ({ children }: { children: ReactNode }) => {
     }, [user, dateStr]);
 
     const updateDailyLog = async (data: Partial<DailyLog>) => {
-        if (!user || !dailyLog) return;
+        if (!user) return;
 
         // Optimistic Update
-        const newLog = { ...dailyLog, ...data };
+        const current = dailyLog || { date: dateStr };
+        const newLog = {
+            ...current,
+            ...data,
+            // Deep merge specific sections to avoid overwriting with partial data
+            weight: { ...current.weight, ...data.weight },
+            food: { ...current.food, ...data.food },
+            todos: data.todos || current.todos, // Arrays usually replaced
+            habits: { ...current.habits, ...data.habits }
+        };
+
         setDailyLog(newLog);
         setLogsCache(prev => ({ ...prev, [dateStr]: newLog }));
 
@@ -122,7 +132,6 @@ export const DashboardProvider = ({ children }: { children: ReactNode }) => {
             await saveDailyLog(user.uid, dateStr, data);
         } catch (error) {
             console.error("Failed to save log", error);
-            // Revert on failure? (Complex, skipping for now unless critical)
         }
     };
 

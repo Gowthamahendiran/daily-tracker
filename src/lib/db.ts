@@ -1,5 +1,5 @@
 import { db, storage } from "./firebase";
-import { doc, getDoc, setDoc, updateDoc, collection, getDocs, query, where, Timestamp } from "firebase/firestore";
+import { doc, getDoc, setDoc, updateDoc, collection, getDocs, query, where, Timestamp, documentId } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 export interface DailyLog {
